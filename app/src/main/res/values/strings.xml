@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EnsureTrack</string>
+    <string name="name">name</string>
+    <string name="email">Email</string>
+    <string name="phone_no">Phone No</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="continue_with_facebook">Continue with facebook</string>
+</resources>

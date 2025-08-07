@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EnsureTrack" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/AppColor</item>
+    </style>
+    <style name="TextHeading">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Description Text Style -->
+    <style name="TextDescription">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/Dark_Grey</item>
+    </style>
+    <style name="TextDescriptionSetting">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_Grey</item>
+    </style>
+
+    <!-- Button Text Style -->
+    <style name="TextButton">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.EnsureTrack" parent="Base.Theme.EnsureTrack" />
+</resources>
