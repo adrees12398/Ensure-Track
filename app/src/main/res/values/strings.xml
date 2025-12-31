@@ -5,4 +5,31 @@
     <string name="phone_no">Phone No</string>
     <string name="enter_password">Enter Password</string>
     <string name="continue_with_facebook">Continue with facebook</string>
+    <string name="we_serve_better_for_you">We Serve Better For You</string>
+    <string name="user_login_here">User Login Here</string>
+    <string name="emailg">Email</string>
+    <string name="my_tasks">My Tasks</string>
+    <string name="todo">To-Do</string>
+    <string name="completed">Completed</string>
+    <string name="filter">Filter</string>
+    <string name="sort_by">Sort by: Due Date</string>
+    <string name="client">Client:</string>
+    <string name="due">Due:</string>
+
+    <string name="enter_your_password">Enter Your password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="log_in">Log In</string>
+    <string name="or">or</string>
+    <string name="facebook_app_id">1135967265110062</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+    <string name="default_web_client_id">xxxxxxxxxxx-abc123def456.apps.googleusercontent.com</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="i_don_t_have_account_create_account">I don\'t have account? Create Account</string>
+    <string name="arrow">Arrow</string>
+    <string name="appLogo">AppLogo</string>
+    <string name="registration">Registration</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

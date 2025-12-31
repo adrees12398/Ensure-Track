@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "EnsureTrack"
 include(":app")
- 
+include(":status Saver")

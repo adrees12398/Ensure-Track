@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_task.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Colored Left Border -->
+        <View
+            android:id="@+id/colorBorder"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="#FF0000" />
+
+        <!-- Task Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Checkbox -->
+            <CheckBox
+                android:id="@+id/taskCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+            <!-- Task Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <!-- Task Title -->
+                <TextView
+                    android:id="@+id/taskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finalize renewal for Mr. Henderson's policy"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Client ID -->
+                <TextView
+                    android:id="@+id/taskClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Client: MH-78910"
+                    android:textColor="#757575"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Due Date -->
+                <TextView
+                    android:id="@+id/taskDueDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Due: Today, 5:00 PM"
+                    android:textColor="#F44336"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

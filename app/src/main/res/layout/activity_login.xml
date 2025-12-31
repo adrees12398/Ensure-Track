@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/con1"
         android:layout_width="match_parent"
@@ -18,10 +19,9 @@
             android:id="@+id/arrow"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:contentDescription="@null"
             android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
-
-            android:contentDescription="@null"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
-            android:text="User Login Here"
+            android:text="@string/user_login_here"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/arrow" />
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
-            android:text="We Serve Better For You"
+            android:text="@string/we_serve_better_for_you"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/register" />
@@ -61,14 +61,13 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="14dp"
-            android:text="Email"
+            android:text="@string/emailg"
             android:textColor="@color/Dark_Grey"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/emailbox"
+            android:id="@+id/EmailBox"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginHorizontal="25dp"
@@ -81,23 +80,21 @@
                 android:id="@+id/emaillogin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawableRight="@drawable/baseline_email_24"
+                android:drawableEnd="@drawable/baseline_email_24"
                 android:inputType="textEmailAddress"
-                android:padding="0dp" />
+                android:padding="0dp"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
-
         <TextView
-            android:id="@+id/dateofBirth"
+            android:id="@+id/DateOfBirth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="14dp"
-            android:text="Enter Your password"
+            android:text="@string/enter_your_password"
             android:textColor="@color/Dark_Grey"
-
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/emailbox" />
-
+            app:layout_constraintTop_toBottomOf="@id/EmailBox" />
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/dateofbirthbox"
             android:layout_width="match_parent"
@@ -107,18 +104,15 @@
             app:hintTextColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dateofBirth">
-
+            app:layout_constraintTop_toBottomOf="@id/DateOfBirth">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPass"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawableRight="@drawable/baseline_email_24"
-                android:inputType="number"
-                android:maxLength="4"
-                android:padding="0dp" />
+                android:drawableEnd="@drawable/baseline_email_24"
+                android:padding="0dp"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
-
         <CheckBox
             android:id="@+id/checkbox"
             android:layout_width="wrap_content"
@@ -131,7 +125,7 @@
             style="@style/TextDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remember me"
+            android:text="@string/remember_me"
             app:layout_constraintBottom_toBottomOf="@id/checkbox"
             app:layout_constraintStart_toEndOf="@id/checkbox"
             app:layout_constraintTop_toTopOf="@id/checkbox" />
@@ -141,10 +135,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="15dp"
-            android:text="Forget Password?"
+            android:text="@string/forget_password"
             android:textColor="#007BFF"
             android:textSize="14sp"
-
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dateofbirthbox" />
@@ -155,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="12dp"
-            android:text="Log In"
+            android:text="@string/log_in"
             android:textColor="@color/black"
             app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -188,7 +181,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="1dp"
-            android:text="or"
+            android:text="@string/or"
             android:textColor="@color/Dark_Grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -224,19 +217,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Continue with Google"
+                android:text="@string/continue_with_google"
                 android:textColor="@color/Dark_Grey" />
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/FaceBookBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="16dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/com_facebook_blue"
             app:cardElevation="@dimen/_6sdp"
             app:cornerRadius="8dp"
-            android:id="@+id/facebookbtn"
             app:iconSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -244,23 +237,18 @@
             app:strokeWidth="0dp">
 
 
-            <ImageView
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginHorizontal="@dimen/_25sdp"
-                android:layout_marginVertical="@dimen/_10sdp"
-                android:contentDescription="@null"
-                android:src="@drawable/facebook" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:text="@string/continue_with_facebook"
-                android:textColor="@color/Dark_Grey" />
+                />
         </com.google.android.material.card.MaterialCardView>
+
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/IDoBtn"
             android:layout_width="match_parent"
-            android:id="@+id/idontbtn"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginVertical="16dp"
@@ -270,7 +258,7 @@
             app:iconSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/facebookbtn"
+            app:layout_constraintTop_toBottomOf="@id/FaceBookBtn"
             app:strokeWidth="0dp">
 
             <TextView
@@ -278,8 +266,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:padding="@dimen/_13sdp"
-                android:text="I don't have account? Create Account"
-                android:textColor="@color/Dark_Grey"/>
+                android:text="@string/i_don_t_have_account_create_account"
+                android:textColor="@color/Dark_Grey" />
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

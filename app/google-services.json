@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "253869693289",
+    "project_id": "ensuretrack",
+    "storage_bucket": "ensuretrack.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253869693289:android:a5adb237d9d9dd426585f8",
+        "android_client_info": {
+          "package_name": "com.example.ensuretrackapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253869693289-ohponkvn71g4q1pcifa8mfjsd593bbsr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ensuretrackapplication",
+            "certificate_hash": "45bcce3c7f94f4b078989fd99a405dd5d6505217"
+          }
+        },
+        {
+          "client_id": "253869693289-fc435q5d20v1bv29lqkndn8egsi825kg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgcX0t91_rLaglTFgs_lU3zbE0ACFFJb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253869693289-fc435q5d20v1bv29lqkndn8egsi825kg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
