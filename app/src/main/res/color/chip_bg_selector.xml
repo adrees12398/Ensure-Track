@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Jab chip SELECTED/CHECKED ho (Black background) -->
+    <item android:color="#111418" android:state_checked="true" />
+
+    <!-- Jab chip NORMAL/UNCHECKED ho (Transparent background) -->
+    <item android:color="@android:color/transparent" />
+</selector>

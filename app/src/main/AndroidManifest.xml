@@ -19,6 +19,15 @@
         android:theme="@style/Theme.EnsureTrack"
         tools:targetApi="31">
         <activity
+            android:name=".AddNewTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewClientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".PerformanceActivity"
             android:exported="false" />
         <activity

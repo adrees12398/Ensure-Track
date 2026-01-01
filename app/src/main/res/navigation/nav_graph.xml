@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/clientFragment2">
+
+    <fragment
+        android:id="@+id/clientFragment2"
+        android:name="com.example.ensuretrackapplication.Fragments.ClientFragment2"
+        android:label="fragment_client2"
+        tools:layout="@layout/fragment_client2" >
+        <action
+            android:id="@+id/action_clientFragment2_to_myTaskFragment"
+            app:destination="@id/myTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myTaskFragment"
+        android:name="com.example.ensuretrackapplication.Fragments.MyTaskFragment"
+        android:label="fragment_my_task"
+        tools:layout="@layout/fragment_my_task" />
+</navigation>

@@ -33,15 +33,15 @@ class SplashActivity : AppCompatActivity() {
         when {
             firebaseUser != null -> {
                 // Agar Google/Email se login hai
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, ManageScreenActivity::class.java))
             }
             fbLoggedIn -> {
                 // Agar Facebook se login hai
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, ManageScreenActivity::class.java))
             }
             sessionClass.getTheme() && sessionClass.getUser().equals("User", true) -> {
                 // Agar tumhari SessionClass ke hisaab se login mila
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, ManageScreenActivity::class.java))
             }
             else -> {
                 // Agar koi bhi login nahi hai

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked state - Primary Blue -->
+    <item android:color="#137FEC" android:state_checked="true" />
+
+    <!-- Unchecked state - White -->
+    <item android:color="#FFFFFF" />
+</selector>
