@@ -2,6 +2,7 @@ package com.example.ensuretrackapplication
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.ensuretrackapplication.Fragments.AdminPaymentDashboardFragment
 import com.example.ensuretrackapplication.Fragments.ClientFragment2
 import com.example.ensuretrackapplication.Fragments.MyTaskFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -26,7 +27,8 @@ class ManageScreenActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.clientFragment2 -> switchFragment(ClientFragment2())
                 R.id.myTaskFragment -> switchFragment(MyTaskFragment())
-                // R.id.tab_home -> switchFragment(HomeFragment())
+                R.id.adminPaymentDashboardFragment -> switchFragment(AdminPaymentDashboardFragment())
+            // R.id.tab_home -> switchFragment(HomeFragment())
                 // etc...
             }
             true

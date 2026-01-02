@@ -3,5 +3,6 @@
     <style name="Base.Theme.EnsureTrack" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
          <item name="colorPrimary">@color/AppColor</item>
+
     </style>
 </resources>

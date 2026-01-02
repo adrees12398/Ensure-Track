@@ -48,7 +48,15 @@
     <color name="gray_600">#4B5563</color>
     <color name="gray_700">#374151</color>
     <color name="gray_800">#1F2937</color>
+    <!-- Status colors - very typical semantic names -->
+    <color name="success">#4CAF50</color>         <!-- green -->
+    <color name="warning">#FFC107</color>         <!-- amber/yellow -->
+    <color name="danger">#F44336</color>          <!-- red -->
 
+    <!-- Background for cards -->
+    <color name="card_bg_light">#F5F5F5</color>   <!-- very light gray / almost white -->
+    <!-- Optional: dark mode variant if you support it -->
+    <!-- <color name="card_bg_light">#121212</color> in values-night/colors.xml -->
     <!-- Transparent -->
     <color name="transparent">#00000000</color>
     <color name="purple_200">#FFBB86FC</color>

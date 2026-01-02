@@ -9,9 +9,9 @@
         android:icon="@drawable/task"
         android:title="Search" />
     <item
-        android:id="@+id/tab_notification"
+        android:id="@+id/adminPaymentDashboardFragment"
         android:icon="@drawable/client"
-        android:title="Noti" />
+        android:title="admin" />
     <item
         android:id="@+id/tab_profile"
         android:icon="@drawable/client"
