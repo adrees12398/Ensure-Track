@@ -49,10 +49,28 @@
     <color name="gray_700">#374151</color>
     <color name="gray_800">#1F2937</color>
     <!-- Status colors - very typical semantic names -->
-    <color name="success">#4CAF50</color>         <!-- green -->
-    <color name="warning">#FFC107</color>         <!-- amber/yellow -->
-    <color name="danger">#F44336</color>          <!-- red -->
 
+
+    <!-- Background Colors -->
+
+
+    <!-- Text Colors -->
+
+    <color name="text_tertiary">#9CA3AF</color>
+
+    <!-- Card & Surface Colors -->
+
+    <color name="card_background">#FFFFFF</color>
+    <color name="border_color">#E5E7EB</color>
+
+    <!-- Switch Colors -->
+    <color name="switch_track">#E5E7EB</color>
+    <color name="switch_thumb">#FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="success">#10B981</color>
+    <color name="error">#EF4444</color>
+    <color name="warning">#F59E0B</color>
     <!-- Background for cards -->
     <color name="card_bg_light">#F5F5F5</color>   <!-- very light gray / almost white -->
     <!-- Optional: dark mode variant if you support it -->

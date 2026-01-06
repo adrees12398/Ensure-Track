@@ -19,6 +19,9 @@
         android:theme="@style/Theme.EnsureTrack"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityRecordPayment"
+            android:exported="false" />
+        <activity
             android:name=".AddNewTaskActivity"
             android:exported="false" />
         <activity

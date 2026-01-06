@@ -1,5 +1,6 @@
 package com.example.ensuretrackapplication.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ensuretrackapplication.ActivityRecordPayment
 import com.example.ensuretrackapplication.Adapters.TransactionAdapter
 import com.example.ensuretrackapplication.Models.AvatarColor
 import com.example.ensuretrackapplication.Models.PaymentStats
@@ -135,9 +137,8 @@ class AdminPaymentDashboardFragment : Fragment() {
 
     private fun setupFAB() {
         fabAddPayment.setOnClickListener {
-            Toast.makeText(requireContext(), "Record New Payment", Toast.LENGTH_SHORT).show()
-            // TODO: Open dialog or navigate to add payment screen
-            openAddPaymentDialog()
+
+            startActivity(Intent(requireActivity(), ActivityRecordPayment:: class.java))
         }
     }
 
