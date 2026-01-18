@@ -13,8 +13,8 @@
         android:icon="@drawable/client"
         android:title="admin" />
     <item
-        android:id="@+id/tab_profile"
-        android:icon="@drawable/client"
-        android:title="Profile" />
+        android:id="@+id/salesPerformanceFragment"
+        android:icon="@drawable/performance"
+        android:title="Sales" />
 
 </menu>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import com.example.ensuretrackapplication.Fragments.AdminPaymentDashboardFragment
 import com.example.ensuretrackapplication.Fragments.ClientFragment2
 import com.example.ensuretrackapplication.Fragments.MyTaskFragment
+import com.example.ensuretrackapplication.Fragments.SalesPerformanceFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlin.jvm.java
 class ManageScreenActivity : AppCompatActivity() {
@@ -28,6 +29,7 @@ class ManageScreenActivity : AppCompatActivity() {
                 R.id.clientFragment2 -> switchFragment(ClientFragment2())
                 R.id.myTaskFragment -> switchFragment(MyTaskFragment())
                 R.id.adminPaymentDashboardFragment -> switchFragment(AdminPaymentDashboardFragment())
+                R.id.salesPerformanceFragment -> switchFragment(SalesPerformanceFragment())
             // R.id.tab_home -> switchFragment(HomeFragment())
                 // etc...
             }

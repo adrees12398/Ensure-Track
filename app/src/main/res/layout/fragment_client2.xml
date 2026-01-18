@@ -63,7 +63,7 @@
             android:id="@+id/searchEditText"
             android:layout_width="match_parent"
             android:layout_height="52dp"
-            android:hint="Search by name, CNIC, phone, or policy #"
+            android:hint="@string/search_by_name_cnic_phone_or_policy"
             android:textColorHint="#9E9E9E"
             android:textColor="#212121"
             android:textSize="15sp"

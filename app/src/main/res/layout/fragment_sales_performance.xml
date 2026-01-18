@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F6F7F8"
+    android:fillViewport="true"
+    tools:context=".Fragments.SalesPerformanceFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:gravity="center_vertical"
+            android:background="#F6F7F8">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Performance"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#111418"
+                    android:letterSpacing="-0.01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last updated: Just now"
+                    android:textSize="11sp"
+                    android:textColor="#9CA3AF"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_recent_history"
+                app:tint="#137FEC"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <!-- Content Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="24dp">
+
+            <!-- Timeframe Segmented Control -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/segmented_bg"
+                android:padding="4dp"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/btnMonthly"
+                    android:layout_width="0dp"
+                    android:layout_height="440dp"
+                    android:layout_weight="1"
+                    android:text="Monthly"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#137FEC"
+                    android:textAllCaps="false"
+                    android:background="@drawable/btn_selected"
+                    android:layout_margin="2dp"
+                    android:elevation="2dp" />
+
+                <Button
+                    android:id="@+id/btnQuarterly"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Quarterly"
+                    android:textSize="13sp"
+                    android:textColor="#6B7280"
+                    android:textAllCaps="false"
+                    android:background="@android:color/transparent"
+                    android:layout_margin="2dp" />
+
+                <Button
+                    android:id="@+id/btnYearly"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Yearly"
+                    android:textSize="13sp"
+                    android:textColor="#6B7280"
+                    android:textAllCaps="false"
+                    android:background="@android:color/transparent"
+                    android:layout_margin="2dp" />
+            </LinearLayout>
+
+            <!-- Target Achievement Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center_horizontal">
+
+                    <!-- Circular Progress -->
+                    <RelativeLayout
+                        android:layout_width="192dp"
+                        android:layout_height="192dp">
+
+                        <!-- Background Circle -->
+                        <ProgressBar
+                            android:id="@+id/progressBackground"
+                            android:layout_width="192dp"
+                            android:layout_height="192dp"
+                            android:indeterminate="false"
+                            android:progress="100"
+                            android:progressDrawable="@drawable/circle_bg"
+                            style="?android:attr/progressBarStyleHorizontal" />
+
+                        <!-- Progress Circle -->
+                        <ProgressBar
+                            android:id="@+id/progressCircle"
+                            android:layout_width="192dp"
+                            android:layout_height="192dp"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="85"
+                            android:progressDrawable="@drawable/circle_progress"
+                            style="?android:attr/progressBarStyleHorizontal" />
+
+                        <!-- Center Text -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tvCurrentAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$8.5k"
+                                android:textSize="30sp"
+                                android:textStyle="bold"
+                                android:textColor="#111418"
+                                android:letterSpacing="-0.02" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="of $10k Goal"
+                                android:textSize="13sp"
+                                android:textColor="#9CA3AF"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Status Badge -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ON TRACK"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:textColor="#059669"
+                            android:background="@drawable/badge_bg"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:letterSpacing="0.05" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You're 85% of the way there!"
+                            android:textSize="13sp"
+                            android:textColor="#6B7280"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+
+                    <!-- Metrics Grid -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#F3F4F6"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginBottom="24dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Policies -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="#111418" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="POLICIES"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:textColor="#9CA3AF"
+                                android:letterSpacing="0.05"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#F3F4F6" />
+
+                        <!-- Conversion -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="24%"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="#111418" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CONVERSION"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:textColor="#9CA3AF"
+                                android:letterSpacing="0.05"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#F3F4F6" />
+
+                        <!-- Gap -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$1.5k"
+                                android:textSize="26sp"
+                                android:textStyle="bold"
+                                android:textColor="#9CA3AF" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="GAP"
+                                android:textSize="9sp"
+                                android:textStyle="bold"
+                                android:textColor="#9CA3AF"
+                                android:letterSpacing="0.05"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Commission Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Commissions"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#111418" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Details"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#137FEC" />
+            </LinearLayout>
+
+            <!-- Commission Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#137FEC">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="24dp">
+
+                    <!-- Left Content -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Earned (Oct)"
+                            android:textSize="13sp"
+                            android:textColor="#BFD9F7" />
+
+                        <TextView
+                            android:id="@+id/tvTotalEarned"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$1,250.00"
+                            android:textSize="34sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:letterSpacing="-0.02"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Based on collected premiums"
+                            android:textSize="11sp"
+                            android:textColor="#BFD9F7"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$25,000"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    <!-- Mini Sparkline Chart -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:orientation="horizontal"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        android:layout_marginBottom="4dp">
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="13dp"
+                            android:background="@drawable/bar_shape"
+                            android:backgroundTint="#4D9FE8"
+                            android:layout_marginEnd="4dp" />
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="19dp"
+                            android:background="@drawable/bar_shape"
+                            android:backgroundTint="#4D9FE8"
+                            android:layout_marginEnd="4dp" />
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:background="@drawable/bar_shape"
+                            android:backgroundTint="#4D9FE8"
+                            android:layout_marginEnd="4dp" />
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="22dp"
+                            android:background="@drawable/bar_shape"
+                            android:backgroundTint="#4D9FE8"
+                            android:layout_marginEnd="4dp" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:background="@drawable/bar_shape"
+                            android:backgroundTint="#4D9FE8" />
+
+                        <View
+                            android:layout_width="6dp"
+                            android:layout_height="29dp"
+                            android:background="@drawable/bar_shape"
+                            android:backgroundTint="#FFFFFF" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Recent Activity Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Activity"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#111418"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Activity Item 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/icon_bg_blue"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_secure"
+                            app:tint="#137FEC" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Policy #8821"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#111418" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="John Doe • Auto Insurance"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+$150.00"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#10B981" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Today"
+                            android:textSize="10sp"
+                            android:textColor="#9CA3AF"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Activity Item 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/icon_bg_purple"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_compass"
+                            app:tint="#9333EA" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Policy #8742"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#111418" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sarah Smith • Home"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+$325.50"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#10B981" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Yesterday"
+                            android:textSize="10sp"
+                            android:textColor="#9CA3AF"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Activity Item 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:alpha="0.75">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/icon_bg_orange"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_dialog_info"
+                            app:tint="#EA580C" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Policy #8619"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#111418" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mike Ross • Life"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+$210.00"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#10B981" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Oct 24"
+                            android:textSize="10sp"
+                            android:textColor="#9CA3AF"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <!--    &lt;!&ndash; Floating Action Button &ndash;&gt;-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="24dp"
+                android:src="@android:drawable/ic_input_add"
+                app:backgroundTint="#111418"
+                app:tint="#FFFFFF"
+                app:fabSize="normal"
+                app:elevation="8dp" />
+    </LinearLayout>
+
+
+</ScrollView>
